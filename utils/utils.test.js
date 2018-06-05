@@ -45,6 +45,6 @@ it('should expect some values', () => {
 })
 
 it('should verify first and last names are set', () => {
-  let user = utils.setName({firstName: '', lastName: '', location: "New York", age: 30}, "Drew Overcash")
+  let user = utils.setName({location: "New York", age: 30}, "Drew Overcash")
   expect(user).toInclude({firstName: "Drew", lastName: "Overcash"})
 })
