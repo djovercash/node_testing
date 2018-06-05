@@ -13,6 +13,13 @@ it('should add two numbers', () => {
   // }
 })
 
+it('should add two numbers with async principals', (done) => {
+  utils.asyncAdd(4, 3, (sum) => {
+    expect(sum).toBe(7).toBeA('number')
+    done()
+  })
+})
+
 it('should square a number', () => {
   let res = utils.square(20)
 
@@ -21,6 +28,13 @@ it('should square a number', () => {
   // if (res !== 400) {
   //   throw new Error(`Expected 400, but got ${res}`)
   // }
+})
+
+it('should square a number with async principals', (done) => {
+  utils.asyncSquare(20, (square) => {
+    expect(square).toBe(400).toBeA('number')
+    done()
+  })
 })
 
 it('should expect some values', () => {
